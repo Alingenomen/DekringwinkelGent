@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="be.uwkringwinkel.android.dekringwinkelgent.MainActivity"
+    android:background="@drawable/background"
     android:orientation="vertical"
-    android:background="@drawable/background">
+    tools:context="be.uwkringwinkel.android.dekringwinkelgent.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,75 +24,50 @@
             android:id="@+id/bereikenText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ons bereiken?"
-            android:textSize="24sp"
-            android:layout_marginLeft="24dp"
             android:layout_marginBottom="8dp"
-            android:textColor="#F08600"/>
+            android:layout_marginLeft="24dp"
+            android:text="@string/bereiken"
+            android:textColor="#F08600"
+            android:textSize="24sp" />
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/home2text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:drawableLeft="@drawable/home"
+            android:gravity="center_vertical"
+            android:text="@string/vlaamseKaai" />
 
-            <ImageView
-                android:id="@+id/homeIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/home"
-                android:layout_marginLeft="20dp"/>
-            <TextView
-                android:id="@+id/hometext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Vlaamse kaai 10"
-                android:layout_gravity="center_vertical"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/locationtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:drawableLeft="@drawable/location"
+            android:gravity="center_vertical"
+            android:text="@string/postcodeStad" />
 
-            <ImageView
-                android:id="@+id/locationIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/location"
-                android:layout_marginLeft="20dp"/>
-            <TextView
-                android:id="@+id/locationtext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="9000 Gent"
-                android:layout_gravity="center_vertical"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/internetIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/internet"
-                android:layout_marginLeft="20dp"/>
-            <TextView
-                android:id="@+id/internetText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="http://www.uwkringwinkel.be/nl/home"
-                android:layout_gravity="center_vertical"
-                android:autoLink="web"/>
-        </LinearLayout>
+        <TextView
+            android:id="@+id/internetText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:autoLink="web"
+            android:drawableLeft="@drawable/internet"
+            android:gravity="center_vertical"
+            android:text="@string/webAdress" />
 
         <TextView
             android:id="@+id/openingsurenText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Openingsuren"
-            android:textSize="24sp"
-            android:layout_marginLeft="24dp"
             android:layout_marginBottom="16dp"
+            android:layout_marginLeft="24dp"
             android:layout_marginTop="8dp"
-            android:textColor="#F08600"/>
+            android:text="@string/openingsuren"
+            android:textColor="#F08600"
+            android:textSize="24sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -103,34 +77,38 @@
                 android:id="@+id/weekdagenText"
                 android:layout_width="80sp"
                 android:layout_height="wrap_content"
-                android:text="ma - vrij"
+                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="24dp"
-                android:layout_marginBottom="10dp"/>
+                android:text="@string/weekdagen" />
+
             <TextView
                 android:id="@+id/weekdagenUrenText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="10:00u - 18:00u"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:text="@string/weekdagenUren" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/zaterdagenText"
-                android:layout_width="80sp"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:text="za"
+                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="24dp"
-                android:layout_marginBottom="10dp"/>
+                android:text="@string/zaterdagen" />
+
             <TextView
                 android:id="@+id/zaterdagenUrenText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="10:00u - 17:00u"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:text="@string/zaterdagenUren" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -139,15 +117,16 @@
                 android:id="@+id/zondagenText"
                 android:layout_width="80sp"
                 android:layout_height="wrap_content"
-                android:text="zo &amp; feest"
+                android:layout_marginBottom="24dp"
                 android:layout_marginLeft="24dp"
-                android:layout_marginBottom="24dp"/>
+                android:text="@string/zondagen" />
+
             <TextView
                 android:id="@+id/zondagenUrenText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="gesloten"
-                android:layout_marginBottom="24dp"/>
+                android:layout_marginBottom="24dp"
+                android:text="@string/gesloten" />
         </LinearLayout>
 
         <fragment xmlns:android="http://schemas.android.com/apk/res/android"
@@ -156,9 +135,9 @@
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="300dp"
             android:layout_height="200dp"
-            tools:context="be.uwkringwinkel.android.googlemapstesting.MapsActivity"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="24dp"/>
+            android:layout_marginBottom="24dp"
+            tools:context="be.uwkringwinkel.android.googlemapstesting.MapsActivity" />
     </LinearLayout>
 
 </ScrollView>

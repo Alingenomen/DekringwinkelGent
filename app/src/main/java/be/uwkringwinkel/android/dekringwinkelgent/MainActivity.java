@@ -1,7 +1,6 @@
 package be.uwkringwinkel.android.dekringwinkelgent;
 
 import android.graphics.Typeface;
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
@@ -22,13 +21,11 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
         assignFonts();
     }
-
 
     /**
      * Manipulates the map once available.
@@ -43,17 +40,18 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
+        // Add a marker at the shop location and move the camera
         LatLng sydney = new LatLng(51.044046, 3.741549);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Vlaamse Kaai 10"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-        mMap.animateCamera( CameraUpdateFactory.zoomTo( 15.0f ) );
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(15.0f));
     }
 
+    // Method to assign the fonts to the various textViews
     private void assignFonts() {
         // Typeface Bauhaus_Std_Medium = Typeface.createFromAsset(getAssets(),"fonts/Bauhaus_Std_Medium.ttf");
-        Typeface Bauhaus_Std_Bold = Typeface.createFromAsset(getAssets(),"fonts/Bauhaus_Std_Bold.ttf");
-        Typeface Futura_Std_Book = Typeface.createFromAsset(getAssets(),"fonts/Futura_Std_Book.ttf");
+        Typeface Bauhaus_Std_Bold = Typeface.createFromAsset(getAssets(), "fonts/Bauhaus_Std_Bold.ttf");
+        Typeface Futura_Std_Book = Typeface.createFromAsset(getAssets(), "fonts/Futura_Std_Book.ttf");
 
         TextView bereikenText = findViewById(R.id.bereikenText);
         bereikenText.setTypeface(Bauhaus_Std_Bold);
@@ -72,16 +70,19 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         TextView weekdagenText = findViewById(R.id.weekdagenText);
         weekdagenText.setTypeface(Futura_Std_Book);
+
         TextView weekdagenUrenText = findViewById(R.id.weekdagenUrenText);
         weekdagenUrenText.setTypeface(Futura_Std_Book);
 
         TextView zaterdagenText = findViewById(R.id.zaterdagenText);
         zaterdagenText.setTypeface(Futura_Std_Book);
+
         TextView zaterdagenUrenText = findViewById(R.id.zaterdagenUrenText);
         zaterdagenUrenText.setTypeface(Futura_Std_Book);
 
         TextView zondagenText = findViewById(R.id.zondagenText);
         zondagenText.setTypeface(Futura_Std_Book);
+
         TextView zondagenUrenText = findViewById(R.id.zondagenUrenText);
         zondagenUrenText.setTypeface(Futura_Std_Book);
     }

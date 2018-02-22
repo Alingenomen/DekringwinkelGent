@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">De kringwinkel Gent</string>
+    <string name="bereiken">Ons bereiken?</string>
+    <string name="vlaamseKaai">Vlaamse kaai 10</string>
+    <string name="postcodeStad">9000 Gent</string>
+    <string name="webAdress">http://www.uwkringwinkel.be/nl/home</string>
+    <string name="openingsuren">Openingsuren</string>
+    <string name="weekdagen">ma - vrij</string>
+    <string name="weekdagenUren">10:00u - 18:00u</string>
+    <string name="zaterdagen">za</string>
+    <string name="zaterdagenUren">10:00u - 17:00u</string>
+    <string name="zondagen"><![CDATA[zo & feest]]></string>
+    <string name="gesloten">gesloten</string>
 
 </resources>
