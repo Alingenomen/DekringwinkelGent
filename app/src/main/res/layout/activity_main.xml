@@ -76,7 +76,7 @@
 
             <TextView
                 android:id="@+id/weekdagenText"
-                android:layout_width="80sp"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="24dp"
@@ -116,7 +116,7 @@
 
             <TextView
                 android:id="@+id/zondagenText"
-                android:layout_width="80sp"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
                 android:layout_marginLeft="24dp"
